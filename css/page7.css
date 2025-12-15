@@ -1,0 +1,73 @@
+body {
+  background: radial-gradient(circle at top, #1a1a1a, #000);
+  color: #d0d0d0;
+  font-family: "Times New Roman", serif;
+}
+
+header {
+  padding: 80px;
+  text-align: center;
+  text-shadow: 0 0 15px #777;
+}
+
+.story {
+  max-width: 850px;
+  margin: 70px auto;
+  line-height: 2.1;
+}
+@media (max-width: 768px) {
+
+  /* ШАПКА */
+  header {
+    height: 250px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  /* ТЕКСТ */
+  .story {
+    margin: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  /* МЕДИА */
+  .media {
+    grid-template-columns: 1fr;   /* одна колонка */
+    padding: 0 20px;
+  }
+
+  .media img,
+  .media video {
+    height: 200px;               /* одинаковый размер */
+  }
+
+  /* НУМЕРАЦИЯ */
+  .pages {
+    padding: 30px;
+  }
+
+  .pages a,
+  .pages span {
+    font-size: 1em;
+    margin: 0 6px;
+  }
+
+  /* ПОДВАЛ */
+  footer {
+    padding: 30px 20px;
+    font-size: 0.9em;
+  }
+}

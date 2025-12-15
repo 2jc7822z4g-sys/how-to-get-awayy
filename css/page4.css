@@ -1,0 +1,97 @@
+body {
+  background: linear-gradient(180deg, #071c22, #000);
+  color: #7fffd4;
+  font-family: Verdana, sans-serif;
+}
+
+header {
+  padding: 80px;
+  text-align: center;
+  text-shadow: 0 0 20px cyan;
+}
+
+.story {
+  max-width: 850px;
+  margin: 70px auto;
+  font-size: 1.25em;
+  line-height: 2;
+}
+
+.media {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 0 12%;
+}
+
+.media img {
+  width: 100%;
+  max-height: 220px;        /* фото меньше */
+  object-fit: cover;        /* аккуратная обрезка */
+  box-shadow: 0 0 20px rgba(0,255,255,0.4);
+}
+
+.media img,
+.media video {
+  width: 100%;
+  height: 220px;          /* ОДИНАКОВАЯ высота */
+  object-fit: cover;     /* аккуратная обрезка */
+  box-shadow: 0 0 20px rgba(0,0,0,0.8);
+  transition: transform 0.4s, filter 0.4s;
+}
+@media (max-width: 768px) {
+
+  /* ШАПКА */
+  header {
+    height: 250px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  /* ТЕКСТ */
+  .story {
+    margin: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  /* МЕДИА */
+  .media {
+    grid-template-columns: 1fr;   /* одна колонка */
+    padding: 0 20px;
+  }
+
+  .media img,
+  .media video {
+    height: 200px;               /* одинаковый размер */
+  }
+
+  /* НУМЕРАЦИЯ */
+  .pages {
+    padding: 30px;
+  }
+
+  .pages a,
+  .pages span {
+    font-size: 1em;
+    margin: 0 6px;
+  }
+
+  /* ПОДВАЛ */
+  footer {
+    padding: 30px 20px;
+    font-size: 0.9em;
+  }
+}

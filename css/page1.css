@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #050505, #1a1a1a);
+  color: #ddd;
+  font-family: Georgia, serif;
+}
+
+/* Шапка с фоном */
+header {
+  height: 400px; 
+  background-image: url('../сайт/media/moya_foto.jpg'); /* <-- сюда вставляешь своё фото */
+  background-size: cover;       /* чтобы картинка растянулась по размеру */
+  background-position: center;  /* центр картинки по центру */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 15px black;
+  position: relative;
+}
+
+/* Темная полупрозрачная подложка для читаемости текста */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5); /* можно менять прозрачность */
+  z-index: 0;
+}
+
+/* Контент шапки поверх overlay */
+header h1, header p, header nav {
+  position: relative;
+  z-index: 1;
+}
+
+/* Заголовок шапки */
+header h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+/* Подзаголовок */
+header p {
+  margin: 10px 0 20px 0;
+  font-size: 1.2em;
+}
+
+/* Навигация */
+header nav a {
+  color: #ddd;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #8a2be2;
+}
+
+/* Секция истории */
+.story {
+  max-width: 900px;
+  margin: 80px auto;
+  font-size: 1.3em;
+  line-height: 2;
+}
+
+/* Медиа */
+.media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 0 10%;
+}
+
+.media video {
+  grid-column: 1 / 3;
+}
+
+.media img, .media video {
+  width: 100%;
+  box-shadow: 0 0 30px black;
+}
+
+/* Нумерация страниц */
+.pages {
+  text-align: center;
+  padding: 50px;
+}
+
+.pages a, .pages span {
+  margin: 0 10px;
+  font-size: 1.2em;
+  color: #aaa;
+  text-decoration: none;
+}
+
+.pages .active {
+  color: #8a2be2;
+}
+
+/* Подвал */
+footer {
+  padding: 50px;
+  text-align: center;
+  background: #050505;
+}
+@media (max-width: 768px) {
+
+  /* ШАПКА */
+  header {
+    height: 250px;
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 1.6em;
+  }
+
+  header p {
+    font-size: 1em;
+  }
+
+  header nav a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  /* ТЕКСТ */
+  .story {
+    margin: 40px 20px;
+    font-size: 1.1em;
+    line-height: 1.7;
+  }
+
+  /* МЕДИА */
+  .media {
+    grid-template-columns: 1fr;   /* одна колонка */
+    padding: 0 20px;
+  }
+
+  .media img,
+  .media video {
+    height: 200px;               /* одинаковый размер */
+  }
+
+  /* НУМЕРАЦИЯ */
+  .pages {
+    padding: 30px;
+  }
+
+  .pages a,
+  .pages span {
+    font-size: 1em;
+    margin: 0 6px;
+  }
+
+  /* ПОДВАЛ */
+  footer {
+    padding: 30px 20px;
+    font-size: 0.9em;
+  }
+}
